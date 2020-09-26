@@ -1,0 +1,80 @@
+<html>
+<head>
+<style type="text/css">
+body { height: 100%; width: 100%; margin: 0; padding: 0; position: absolute; }
+div { display: block; box-sizing: border-box; }
+</style>
+<script>
+// Screams
+const s = [
+'kMktFyb5tw8',
+'PivLIUu62Bc',
+'bLEAD0y-mpc',
+'Ar2DH94C4lE',
+'eFY69mns41I',
+'5XUzQC8WWrY',
+'D2jlXWhqGCE',
+'jXws02MX3Rk',
+'6at4pQ5HIa0',
+'6OltqFatkEE',
+'2GVuvz-blhU',
+'Uv6R3qGhGzY',
+'aTovhCmIJfY',
+];
+
+setTimeout(function(){ willGriggsOnFire(); }, 1000);
+
+function willGriggsOnFire(){
+
+  // Meths
+  let f = '', z = 0,
+      c = s.length,
+      x = Math.round(Math.log2(c))  || 1,
+      y = Math.round(Math.log2((c-x)|| 1))|| 1;
+  x = ((x == y)&& ((x*y) < c)) ? x+1 : x;
+  y = ((x > y) && ((x*y) < c)) ? y+1 : y;
+
+  // Goto
+  for(let i=0;i<y;i++){
+    let container = `<div style="width:100%;height:${100/y}%;">`;
+
+    for(let j=0;j<x;j++){
+
+      if(z == c) break;
+
+      container += `
+        <div style="width:${100/x}%;height:100%;float:left;">
+          <iframe width="100%" height="100%" src="https://www.youtube.com/embed/${s[z]}?autoplay=1&showinfo=0&controls=1" frameborder="0" allowfullscreen></iframe>
+        </div>
+      `;
+
+      z++;
+    }
+
+    f += container+'</div>';
+  }
+
+  document.body.innerHTML = f;
+
+  // Debuck
+  /*console.log(`
+    Horizontal Count: ${x}
+    Vertical Count: ${y}
+    Streams: ${s}
+    HTML: ${f}
+  `);*/
+
+  console.log(`
+  	WILL GRIGGS ON
+    
+          ,--.!,
+       __/   -*-
+     ,d08b.  '|'
+     0088MM     
+     '9MMP'     
+  `);
+}
+</script>
+</head>
+<body></body>
+</html>
